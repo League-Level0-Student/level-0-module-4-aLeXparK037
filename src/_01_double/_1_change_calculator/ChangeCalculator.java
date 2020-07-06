@@ -26,10 +26,12 @@ public class ChangeCalculator {
 		String quarters = JOptionPane.showInputDialog("How many quarters do you have?");
 		int quartersInt = Integer.parseInt(quarters);
 		// Calculate how much money the user has.  Hint: Use a double variable 
-		JOptionPane.showMessageDialog(null, "You have a total of "+ (penniesInt + dimesInt + nickelsInt + quartersInt) + " coins" );
+		
+		double coins = (.01*penniesInt + .1*dimesInt + .05*nickelsInt + .25*quartersInt);
 
 		// Tell the user how much money they have in dollars and cents format (e.g. $6.75)
-		JOptionPane.showMessageDialog(null, "The sum of your money is "+ (penniesInt + 10*dimesInt + 5*nickelsInt + 25*quartersInt) + " cents " );
+		JOptionPane.showMessageDialog(null, "The sum of your money is "+ coins + " cents " );
+		
 	}
 }
 
